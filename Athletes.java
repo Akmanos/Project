@@ -3,7 +3,7 @@ package teamProject;
 //@ author Carlos De León Polanco.
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-// hola benny
+//blahblahblahwhathappened
 
 public abstract class Athletes {
 	private String name;
