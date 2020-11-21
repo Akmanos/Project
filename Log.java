@@ -1,8 +1,11 @@
 package teamProject;
 import java.io.*;
 
+
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
+//@author Carlos De León Polanco.
+
 //this class verifies usernames and passwords
 public class Log {
 	private String id;
