@@ -1,7 +1,7 @@
 package teamProject;
 
 //@author Nathaniel Taylor
-//
+//@author Benny Rodriguez
 public abstract class Athletes {
 	private String name;
 	private int age;
