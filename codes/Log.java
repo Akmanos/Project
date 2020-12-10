@@ -75,7 +75,7 @@ public class Log{
         
     }
     //check user credentials against log 
-    public static boolean decrypt(String cred) 
+    public static boolean verify(String cred) 
     {
         try
         {
