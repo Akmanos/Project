@@ -2,9 +2,9 @@ package teamProject;
 
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-//@author Carlos De León Polanco.
+//@author Carlos De LeÃ³n Polanco.
 //This class represents a basketball coach
-public class Coach {
+public class Coach extend Athletes{
 	private String name;
 	private int age;
 	
