@@ -56,7 +56,7 @@ public class Log{
         }
     }
  //encrypt the username and password and provide a private key for decryption
-    public static void encrypt(String strToEncrypt, String secret) 
+    public void encrypt(String strToEncrypt, String secret) 
     {
         try
         {
