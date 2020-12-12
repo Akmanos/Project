@@ -4,6 +4,8 @@ package teamProject;
 //@author Benny Rodriguez
 //@author Carlos De León Polanco.
 
+
+//Make Athletes the main method... and it will be the I/O.
 public abstract class Athletes {
     protected String name;
     protected int age;
