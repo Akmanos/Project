@@ -1,8 +1,15 @@
 package teamProject;
 import java.io.*;
-import java.security.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+import java.util.Base64;
+import java.util.Scanner;
 import javax.crypto.Cipher;
-
+import javax.crypto.spec.SecretKeySpec;
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
 //@author Carlos De León Polanco.
@@ -10,31 +17,30 @@ import javax.crypto.Cipher;
 public class Log{
 	private String id;
 	private String password;
-	private static BufferedWriter bw;
 	private static SecretKeySpec secretKey;
-    	private static byte[] key;
-    	private static String secret;
+    private static byte[] key;
+    private static String secret;
 	
 	
-	Log(String id, String password) throws IOException {
+	Log(String id, String password, String type) throws IOException {
 		this.id = id;
 		this.password = password;
 		//create a new file
 		try {
-			File file = new File("./src/log.txt");
-			if(file.createNewFile()) 
-				System.out.println("File " + file.getName() + " created");
+			File file = new File("./src/Coach.txt");
+			File file2 = new File("./src/Player.txt");
+			if(file.createNewFile() || file2.createNewFile()) 
+				System.out.println("Files created");
 			else
-				System.out.println("File " + file.getName() + " already exists");
+				System.out.println("Files already exists");
 			
 		}catch(IOException e) {
 			throw new IOException("Error creating file");
 		}
-		bw = new BufferedWriter(new FileWriter("./src/log.txt"));
 		String temp = id+" "+password;
 		//set private key
 		secret ="";
-		encrypt(temp, secret);
+		encrypt(temp, secret, type);
 	}
 	
 	//initialize aes encryption keys
@@ -56,7 +62,7 @@ public class Log{
         }
     }
  //encrypt the username and password and provide a private key for decryption
-    public void encrypt(String strToEncrypt, String secret) 
+    public void encrypt(String strToEncrypt, String secret, String type) 
     {
         try
         {
@@ -65,8 +71,8 @@ public class Log{
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
             cipher.init(Cipher.ENCRYPT_MODE, secretKey);
             //write the encrypted id and pass to the file
-            bw.write(Base64.getEncoder().encodeToString(cipher.doFinal(strToEncrypt.getBytes("UTF-8")))+"\n");
-            bw.close();
+            Files.write(Paths.get("./src/"+type+".txt"), 
+            		(Base64.getEncoder().encodeToString(cipher.doFinal(strToEncrypt.getBytes("UTF-8")))+"\n").getBytes(), StandardOpenOption.APPEND);
         } 
         catch (Exception e) 
         {
@@ -75,11 +81,11 @@ public class Log{
         
     }
     //check user credentials against log 
-    public static boolean verify(String cred) 
+    public static boolean verify(String cred, String type) 
     {
         try
         {
-        	Scanner scan = new Scanner(new FileReader("./src/log.txt"));
+			Scanner scan = new Scanner(new FileReader("./src/"+type+".txt"));
             setKey(secret);//set the private key 
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
             cipher.init(Cipher.DECRYPT_MODE, secretKey);//initialize cipher for decryption
