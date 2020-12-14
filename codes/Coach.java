@@ -20,30 +20,6 @@ public class Coach extends Athletes{
         this.id = id;
     }
 
-	protected void setName(String name){
-        this.name = name;
-    }
-
-    public String getName(){
-        return name;
-    }
-
-    protected void setAge(int age){
-        this.age = age;
-    }
-
-    public int getAge(){
-        return age;
-    }
-
-    protected void setID(String id){
-        this.id = id;
-    }
-
-    public String getID(){
-        return id;
-    }
-
     public String getType(){
         return type;
     }
