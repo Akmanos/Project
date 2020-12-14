@@ -6,10 +6,10 @@ package teamProject;
 
 
 //Make Athletes the main method... and it will be the I/O.
-public abstract class Athletes {
-    protected String name;
-    protected int age;
-    protected String id;
+public class Athletes {
+    private String name;
+    private int age;
+    private String id;
 
     public Athletes(String name, int age, String id) {
         this.name = name;
@@ -17,15 +17,27 @@ public abstract class Athletes {
         this.id = id;
     }
 
-    protected abstract void setName(String name);
+    public void setName(String name){
+        this.name = name;
+    }
 
-    public abstract String getName();
+    public  String getName(){
+        return name;
+    }
 
-    protected abstract void setAge(int age);
+    public void setAge(int age){
+        this.age = age;   
+    }
 
-    public abstract int getAge();
+    public int getAge(){
+        return age;
+    }
 
-    protected abstract void setID(String id);
+    public void setID(String id){
+        this.id = id;
+    }
 
-    public abstract String getID();
+    public String getID(){
+        return id;
+    }
 }
