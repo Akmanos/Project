@@ -39,7 +39,7 @@ public class Log{
 		}
 		String temp = id+" "+password;
 		//set private key
-		secret ="";
+		secret ="ooowwieee";
 		encrypt(temp, secret, type);
 	}
 	
