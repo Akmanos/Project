@@ -42,7 +42,7 @@ public class Driver {
 	//coach menu
 	private static void coach() throws IOException {
 		String input = "";
-		Coach manager = new Coach("Main", 27, "main", "Coach");
+		Coach manager = new Coach("Main", 27, "main");
 		Scanner scan = new Scanner(System.in);
 		while(!input.contentEquals("q")) {
 			System.out.println("Enter A to add a player\n"
