@@ -1,5 +1,6 @@
 package teamProject;
 
+import java.util.ArrayList;
 
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
@@ -8,20 +9,18 @@ package teamProject;
 
 public class Coach extends Athletes{
     private String type;
-    private String name;
-    private String id;
-    private int age;
+    private ArrayList<Player> players;
 
     public Coach(String name, int age, String id){
         super(name, age, id);
         type = "Coach";
-        this.name = name;
-        this.age = age;
-        this.id = id;
     }
 
-    public String getType(){
+	public String getType(){
         return type;
     }
-
+    
+	public void addPlayer(Player player) {
+    	players.add(player);
+    }
 }
