@@ -27,8 +27,8 @@ public class Log{
 		this.password = password;
 		//create a new file
 		try {
-			File file = new File("./src/Coach.txt");
-			File file2 = new File("./src/Player.txt");
+			File file = new File("./Coach.txt");
+			File file2 = new File("./Player.txt");
 			if(file.createNewFile() || file2.createNewFile()) 
 				System.out.println("Files created");
 			else
