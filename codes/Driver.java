@@ -55,6 +55,7 @@ public class Driver {
 					+ "Enter PS to add new stats to a player\n"
 					+ "Enter Q to quit");
 			input = scan.hasNext() ? scan.next() : "";
+			scan.nextLine();
 			//check user input
 			switch(input.toLowerCase()) {
 			case "a":
@@ -62,16 +63,21 @@ public class Driver {
 				String name = scan.nextLine();
 				System.out.println("Please enter players age: ");
 				int age = scan.nextInt();
+				scan.nextLine();
 				System.out.println("Please enter players id: ");
 				String id = scan.next();
+				scan.nextLine();
 				System.out.println("Enter player height: ");
 				int height = scan.nextInt();
+				scan.nextLine();
 				System.out.println("Enter player's weight: ");
 				int weight = scan.nextInt();
+				scan.nextLine();
 				//create player
 				manager.addPlayer(new Player(name, age, id, height, weight));
 				System.out.println("Please enter player's password: ");
 				String password = scan.next();
+				scan.nextLine();
 				//create players login
 				new Log(id, password, "Player");
 				break;

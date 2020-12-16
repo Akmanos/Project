@@ -14,6 +14,7 @@ public class Coach extends Athletes{
     public Coach(String name, int age, String id){
         super(name, age, id);
         type = "Coach";
+        players = new ArrayList<Player>();
     }
 
 	public String getType(){
