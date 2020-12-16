@@ -1,7 +1,5 @@
- 
 
 import java.util.ArrayList;
-
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
 //@author Carlos De León Polanco.
@@ -10,18 +8,32 @@ import java.util.ArrayList;
 public class Coach extends Athletes{
     private String type;
     private ArrayList<Player> players;
+    private ArrayList<Statistics> teamStat;
 
     public Coach(String name, int age, String id){
         super(name, age, id);
         type = "Coach";
         players = new ArrayList<Player>();
+        teamStat = new ArrayList<Statistics>();
     }
 
-	public String getType(){
+    public String getType(){
         return type;
     }
-    
-	public void addPlayer(Player player) {
-    	players.add(player);
+
+    public void addPlayer(Player player) {
+        players.add(player);
     }
+
+    public void addStat(String v, String r){
+        teamStat.add(new Statistics(v,r));
+    }
+
+    public void getStat(){
+        for(int i = 0; i < teamStat.size(); i++){
+
+            System.out.println(teamStat.get(i));
+
+        }
+    } 
 }
