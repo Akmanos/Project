@@ -1,4 +1,4 @@
-package teamProject;
+ 
 
 
 //@author Nathaniel Taylor
@@ -8,10 +8,10 @@ package teamProject;
 
 public class Player extends Athletes{
     private String type;
-    private int height;
+    private double height;
     private int weight;
 
-    public Player(String name, int age, String id, int height, int weight){
+    public Player(String name, int age, String id, double height, int weight){
         super(name, age, id);
         this.type = "Player";
         this.height = height;
@@ -26,7 +26,7 @@ public class Player extends Athletes{
         this.height = height;
     }
 
-    public int getHeight(){
+    public double getHeight(){
         return this.height;
     }
 

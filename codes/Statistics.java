@@ -1,4 +1,4 @@
-package teamProject;
+ 
 
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
@@ -20,4 +20,9 @@ public class Statistics {
 		this.astavg = astavg;
 		this.rebavg = rebavg;
 	}
+	
+	
+	
+	
+	
 }
