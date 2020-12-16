@@ -1,8 +1,7 @@
 package teamProject;
-
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-//@author Carlos De LeÃ³n Polanco.
+//@author Carlos De León Polanco.
 
 
 //Make Athletes the main method... and it will be the I/O.

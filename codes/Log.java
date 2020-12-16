@@ -8,28 +8,25 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.Scanner;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-//@author Carlos De LeÃ³n Polanco.
+//@author Carlos De León Polanco.
 //this class verifies usernames and passwords
 public class Log{
-	private String id;
-	private String password;
 	private static SecretKeySpec secretKey;
     private static byte[] key;
     private static String secret;
 	
 	
 	Log(String id, String password, String type) throws IOException {
-		this.id = id;
-		this.password = password;
 		//create a new file
 		try {
 			File file = new File("./Coach.txt");
 			File file2 = new File("./Player.txt");
-			if(file.createNewFile() || file2.createNewFile()) 
+			if(file.createNewFile() && file2.createNewFile()) 
 				System.out.println("Files created");
 			else
 				System.out.println("Files already exists");
@@ -39,7 +36,7 @@ public class Log{
 		}
 		String temp = id+" "+password;
 		//set private key
-		secret ="ooowwieee";
+		secret ="oooowwieeee";
 		encrypt(temp, secret, type);
 	}
 	
@@ -71,7 +68,7 @@ public class Log{
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
             cipher.init(Cipher.ENCRYPT_MODE, secretKey);
             //write the encrypted id and pass to the file
-            Files.write(Paths.get("./src/"+type+".txt"), 
+            Files.write(Paths.get("./"+type+".txt"), 
             		(Base64.getEncoder().encodeToString(cipher.doFinal(strToEncrypt.getBytes("UTF-8")))+"\n").getBytes(), StandardOpenOption.APPEND);
         } 
         catch (Exception e) 

@@ -14,8 +14,9 @@ public class Driver {
 		//ask user for type
 		System.out.println("Are you a coach or a player?");
 		String type = scan.next();
-		if(!type.toLowerCase().contentEquals("coach") || 
-				!type.toLowerCase().contentEquals("player")) {
+		type = type.toLowerCase();
+		if(!type.contentEquals("coach") && 
+				!type.contentEquals("player")) {
 			System.out.println(type + " is not an acceptable type. Goodbye!");
 			scan.close();
 			return;
@@ -26,9 +27,10 @@ public class Driver {
 		System.out.println("Password: ");
 		id += " "+scan.next();
 		//verify credentials
+		type = type.contentEquals("coach") ? "Coach" : "Player";
 		if(Log.verify(id, type)) {
 			//give access to functions for their type
-			if(type.toLowerCase().contentEquals("coach")) 
+			if(type.equalsIgnoreCase("coach")) 
 				coach();
 			else
 				player();

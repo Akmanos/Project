@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-//@author Carlos De LeÃ³n Polanco.
+//@author Carlos De León Polanco.
 //This class represents a basketball coach
 
 public class Coach extends Athletes{
