@@ -121,6 +121,31 @@ public class Driver {
     }
 
     private static void player() {
+        Scanner scan = new Scanner(System.in);
+        String input;
+        do {
+            System.out.println("Enter S to look at team stats\n"
+                + "Enter P to look at a players stats\n"
+                + "Enter Q to quit");
+            input = scan.hasNext() ? scan.nextLine() : "";
+
+            switch(input.toLowerCase()) {
+                case "s":
+                //return whole teams stats
+                break;
+                case "p":
+                //return a given players stats
+                System.out.println("Please enter players id: ");
+                //call method
+                break;
+
+                default:
+                System.out.println("Goodbye");
+                scan.close();
+
+            }
+        }while(!input.equalsIgnoreCase("q"));
 
     }
 }
+
