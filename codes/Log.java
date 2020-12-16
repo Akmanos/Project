@@ -13,7 +13,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-//@author Carlos De León Polanco.
+//@author Carlos De LeÃ³n Polanco.
 //this class verifies usernames and passwords
 public class Log{
 	private static SecretKeySpec secretKey;
@@ -82,7 +82,7 @@ public class Log{
     {
         try
         {
-			Scanner scan = new Scanner(new FileReader("./src/"+type+".txt"));
+			Scanner scan = new Scanner(new FileReader("./"+type+".txt"));
             setKey(secret);//set the private key 
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
             cipher.init(Cipher.DECRYPT_MODE, secretKey);//initialize cipher for decryption
