@@ -1,4 +1,4 @@
- 
+package teamProject;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,7 +13,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-//@author Carlos De Leon Polanco.
+//@author Carlos De León Polanco.
 //this class verifies usernames and passwords
 public class Log{
 	private static SecretKeySpec secretKey;
@@ -29,7 +29,7 @@ public class Log{
 			if(file.createNewFile() && file2.createNewFile()) 
 				System.out.println("Files created");
 			else
-				System.out.println("Your file is ready.");
+				System.out.println("Ready for credentials");
 			
 		}catch(IOException e) {
 			throw new IOException("Error creating file");
