@@ -1,9 +1,7 @@
  
-
-
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-//@author Carlos De León Polanco.
+//@author Carlos De Leon Polanco.
 //This class represents a basketball Player
 
 public class Player extends Athletes{

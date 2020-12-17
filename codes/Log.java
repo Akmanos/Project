@@ -13,7 +13,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-//@author Carlos De León Polanco.
+//@author Carlos De Leon Polanco.
 //this class verifies usernames and passwords
 public class Log{
 	private static SecretKeySpec secretKey;

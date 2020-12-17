@@ -1,7 +1,7 @@
 
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-//@author Carlos De León Polanco.
+//@author Carlos De Leon Polanco.
 //this class represents a players stats per game or practice
 public class Statistics {
     private int pnt; //points

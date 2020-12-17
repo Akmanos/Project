@@ -1,7 +1,7 @@
  
 //@author Nathaniel Taylor
 //@author Benny Rodriguez
-//@author Carlos De León Polanco.
+//@author Carlos De Leon Polanco.
 
 
 //Make Athletes the main method... and it will be the I/O.

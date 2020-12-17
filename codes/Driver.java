@@ -61,10 +61,11 @@ public class Driver {
         Scanner scan = new Scanner(System.in);
         while(!input.contentEquals("q")) {
             System.out.println("Enter A to add a player\n"
-                + "Enter S to look at team stats\n"
+                + "Enter S to look at Statistics\n"
                 + "Enter P to look at a players stats\n"
                 + "Enter R to remove a player\n"
-                + "Enter C to add a new coach\n"
+                + "Enter C to add/remove a new coach\n"
+                + "Enter SS to see schedule\n"
                 + "Enter PS to add new stats to a player\n"
                 + "Enter Q to quit");
             input = scan.hasNext() ? scan.next() : "";
@@ -94,22 +95,31 @@ public class Driver {
                 //create players login
                 new Log(id, password, "Player");
                 break;
+                
                 case "s":
                 //return whole teams stats
                 break;
+                
+                case "ss":
+                // return schedule
+                break;
+                
                 case "p":
                 //return a given players stats
                 System.out.println("Please enter players id: ");
                 //call method
                 break;
+                
                 case "r":
                 //remove a player
                 System.out.println("Please enter players id: ");
                 break;
+                
                 case "c":
                 //create a new coach
                 //basically copy paste switch case a but change type to Coach
                 break;
+                
                 case "ps":
                 //get a player by id and add stats to player
 
@@ -126,6 +136,7 @@ public class Driver {
         do {
             System.out.println("Enter S to look at team stats\n"
                 + "Enter P to look at a players stats\n"
+                + "Enter SS to see schedule\n"
                 + "Enter Q to quit");
             input = scan.hasNext() ? scan.nextLine() : "";
 
@@ -133,6 +144,11 @@ public class Driver {
                 case "s":
                 //return whole teams stats
                 break;
+                
+                case "ss":
+                //return schedule schedule
+                break;
+                
                 case "p":
                 //return a given players stats
                 System.out.println("Please enter players id: ");
