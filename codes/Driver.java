@@ -14,7 +14,7 @@ public class Driver {
     public static void main(String[] args) throws IOException {
         // TODO Auto-generated method stub
         //create main login
-        new Log("main","main1","Coach");
+        //new Log("main","main1","Coach");
         String type = "";
         String input = "";
         //ask user for type
